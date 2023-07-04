@@ -1,5 +1,10 @@
-import './globals.css'
+import "../styles/globals.css"
 import { Inter } from 'next/font/google'
+import "moment/locale/mn";
+import "gestalt/dist/gestalt.css";
+import moment from "moment";
+
+moment.locale("mn");
 
 const inter = Inter({ subsets: ['latin'] })
 
