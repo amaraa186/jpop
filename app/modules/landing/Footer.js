@@ -4,7 +4,7 @@ import Contact from "../../components/Contact";
 
 const Footer = () => {
   return (
-    <Box paddingY={12} display="flex">
+    <Box display="flex">
       <Contact />
       <Email />
     </Box>
