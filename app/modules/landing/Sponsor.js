@@ -132,9 +132,9 @@ const Sponsor = () => {
         {/* <Box display="flex" justifyContent="around" alignItems="center"> */}
         {sponsors.map((sponsor, j) => (
           <Box paddingY={6} key={j}>
-            <Flex key={j} gap={2} alignItems="center" justifyContent="around">
+            <Flex gap={2} alignItems="center" justifyContent="around">
               {sponsor.logos.map((logo, i) => (
-                <Box key={i} width="100%">
+                <Box key={i}>
                   <img src={logo.src} style={{ width: "100%" }} />
                 </Box>
               ))}
