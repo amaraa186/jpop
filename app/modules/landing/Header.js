@@ -7,14 +7,9 @@ import {
   CompositeZIndex,
   FixedZIndex,
 } from "gestalt";
-import styled from "styled-components";
 
 const BOX_ZINDEX = new FixedZIndex(1);
 const STICKY_ZINDEX = new CompositeZIndex([BOX_ZINDEX]);
-
-const Wrapper = styled.div`
-  background: #f271ac;
-`;
 
 const Header = () => {
   const taps = ["Эхлэл", "Бүртгэл", "Хөтөлбөр", "Өдөрлөг", "Холбогдох"];
@@ -35,7 +30,11 @@ const Header = () => {
 
   return (
     <Sticky zIndex={STICKY_ZINDEX} top={0}>
-      <Wrapper>
+      <div
+        style={{
+          backgroundColor: "#f271ac",
+        }}
+      >
         <Box display="flex" alignItems="center" justifyContent="between">
           <Box marginStart={5}>
             <img
@@ -66,7 +65,7 @@ const Header = () => {
             </Flex>
           </Box>
         </Box>
-      </Wrapper>
+      </div>
     </Sticky>
   );
 };
