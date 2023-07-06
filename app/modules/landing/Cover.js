@@ -1,7 +1,10 @@
 import { Box } from "gestalt";
 import Counter from "../../components/Counter";
+import { useMediaQuery } from "react-responsive";
 
 const Cover = () => {
+  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
+
   return (
     <Box position="relative" display="flex" justifyContent="center">
       <Box width="100%">
@@ -10,8 +13,8 @@ const Cover = () => {
           src="https://docs.google.com/uc?export=download&id=1-L1GOcb5wf7GNR5GwmH7r5kkuxkuSZ81"
         />
       </Box>
-      <Box position="absolute" bottom marginBottom={12}>
-        <Box marginBottom={12}>
+      <Box position="absolute" bottom marginBottom={isTabletOrMobile ? 4 : 12}>
+        <Box marginBottom={isTabletOrMobile ? 2 : 12}>
           <Counter />
         </Box>
       </Box>

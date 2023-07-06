@@ -20,15 +20,13 @@ const Registration = () => {
   return (
     <Box padding={12}>
       <Title text="ТЭМЦЭЭНИЙ БҮРТГЭЛ" />
-      <Flex gap={4} justifyContent="center">
+      <Flex gap={4} justifyContent="center" wrap>
         {contests.map((contest, i) => (
-          <TapArea onTap={() => {}} key={i}>
-            <Box column={4}>
-              <Mask>
-                <Image src={contest.src} naturalHeight={1} naturalWidth={1} />
-              </Mask>
-            </Box>
-          </TapArea>
+          <Box column={12} key={i} color="brand">
+            <TapArea onTap={() => {}}>
+              <img src={contest.src} style={{ width: "100%" }} />
+            </TapArea>
+          </Box>
         ))}
       </Flex>
     </Box>

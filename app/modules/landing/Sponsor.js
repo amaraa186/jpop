@@ -1,6 +1,6 @@
 import { Box, Flex } from "gestalt";
 import Title from "../../components/Title";
-import { color } from "framer-motion";
+import { useMediaQuery } from "react-responsive";
 
 const Sponsor = () => {
   const sponsors = [
@@ -125,24 +125,26 @@ const Sponsor = () => {
     },
   ];
 
+  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
+
   return (
     <Box padding={12}>
       <Title text="ДЭМЖИГЧ БАЙГУУЛЛАГУУД" />
       <Box paddingY={12} display="flex" direction="column">
         {sponsors.map((sponsor, index) => (
-          <Box key={index} paddingY={6}>
+          <Box key={index} paddingY={6} column={12}>
             <Flex gap={2} alignItems="center" justifyContent="around">
               {sponsor.logos.map((logo, i) => (
-                <Box key={i}>
+                <Box key={i} column={6} lgColumn={12} mdColumn={6} smColumn={6}>
                   <img src={logo.src} style={{ width: "100%" }} />
                 </Box>
               ))}
             </Flex>
             {index < sponsors.length - 1 && (
-              <Box padding={12}>
+              <Box padding={6}>
                 <div
                   style={{
-                    height: 10,
+                    height: isTabletOrMobile ? 5 : 10,
                     width: "100%",
                     background: "#F271AC",
                   }}

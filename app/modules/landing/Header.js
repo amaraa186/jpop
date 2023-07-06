@@ -7,6 +7,7 @@ import {
   CompositeZIndex,
   FixedZIndex,
 } from "gestalt";
+import { useMediaQuery } from "react-responsive";
 
 const BOX_ZINDEX = new FixedZIndex(1);
 const STICKY_ZINDEX = new CompositeZIndex([BOX_ZINDEX]);
@@ -27,6 +28,9 @@ const Header = () => {
       src: "https://docs.google.com/uc?export=download&id=1pi0bjemoe1qAQgJPcnrC1VERJrzLuyXU",
     },
   ];
+  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
+
+  if (isTabletOrMobile) return;
 
   return (
     <Sticky zIndex={STICKY_ZINDEX} top={0}>

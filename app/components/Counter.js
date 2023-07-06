@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import { Box, Heading } from "gestalt";
 import moment from "moment";
+import { useMediaQuery } from "react-responsive";
 
 const endDate = moment("2023-07-29 12:00:00");
 
@@ -9,6 +9,7 @@ const Counter = () => {
   const [hour, setHour] = useState(0);
   const [minute, setMinute] = useState(0);
   const [second, setSecond] = useState(0);
+  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -27,10 +28,10 @@ const Counter = () => {
   return (
     <h1
       style={{
-        fontSize: "144px",
+        fontSize: isTabletOrMobile ? "28px" : "144px",
         fontFamily: "monospace",
         color: "transparent",
-        WebkitTextStrokeWidth: 2,
+        WebkitTextStrokeWidth: isTabletOrMobile ? 1 : 2,
         WebkitTextStrokeColor: "black",
       }}
     >
