@@ -9,7 +9,7 @@ const Email = () => {
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
 
   return (
-    <Box smColumn={12} mdColumn={12} lgColumn={6}>
+    <Box smColumn={12} mdColumn={12} lgColumn={6} column={12}>
       <div
         style={{
           backgroundColor: "rgb(34,34,34,0.03)",

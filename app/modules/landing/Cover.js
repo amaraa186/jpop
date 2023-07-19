@@ -13,10 +13,8 @@ const Cover = () => {
           src="https://docs.google.com/uc?export=download&id=1-L1GOcb5wf7GNR5GwmH7r5kkuxkuSZ81"
         />
       </Box>
-      <Box position="absolute" bottom marginBottom={isTabletOrMobile ? 4 : 12}>
-        <Box marginBottom={isTabletOrMobile ? 2 : 12}>
-          <Counter />
-        </Box>
+      <Box position="absolute" bottom>
+        <Counter />
       </Box>
     </Box>
   );

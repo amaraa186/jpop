@@ -1,18 +1,19 @@
-import { Box } from "gestalt";
+import { Box, Link, Text } from "gestalt";
 import { useMediaQuery } from "react-responsive";
 
-const Title = (props) => {
-  const { text } = props;
+const Button = (props) => {
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
+  const { link, text } = props;
 
   return (
     <Box
       display="flex"
-      justifyContent="between"
+      justifyContent="center"
       alignItems="center"
       position="relative"
+      paddingY={3}
     >
-      <Box width={isTabletOrMobile ? 50 : 170}>
+      <Box width={40} position="absolute" left marginStart={7} top>
         <img
           src="https://docs.google.com/uc?export=download&id=1SnsdZmk9hCM2w2vv4_fs6daLkrtIk06n"
           style={{
@@ -20,23 +21,21 @@ const Title = (props) => {
           }}
         />
       </Box>
-      <Box
-        position="absolute"
-        marginBottom={isTabletOrMobile ? 0 : 8}
-        marginStart={isTabletOrMobile ? 4 : 12}
+      <div
+        style={{
+          backgroundColor: "#F270AC",
+          borderRadius: 8,
+        }}
       >
-        <h1
-          style={{
-            fontSize: isTabletOrMobile ? "14px" : "32px",
-            color: "#F270AC",
-            fontWeight: "bold",
-            textShadow: "2px 1px #fff",
-          }}
-        >
-          {text}
-        </h1>
-      </Box>
-      <Box width={isTabletOrMobile ? 50 : 170}>
+        <Link href={link} underline="none">
+          <Box paddingY={3} paddingX={4}>
+            <Text color="light" weight="bold" size="200">
+              {text.toUpperCase()}
+            </Text>
+          </Box>
+        </Link>
+      </div>
+      <Box width={40} position="absolute" right top marginEnd={7}>
         <img
           src="https://docs.google.com/uc?export=download&id=1SnsdZmk9hCM2w2vv4_fs6daLkrtIk06n"
           style={{
@@ -49,4 +48,4 @@ const Title = (props) => {
   );
 };
 
-export default Title;
+export default Button;

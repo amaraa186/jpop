@@ -13,9 +13,9 @@ const Home = () => {
     <Box color="light">
       <Header />
       <Cover />
-      <Registration />
-      <Sponsor />
-      <Footer />
+        <Registration />
+        <Sponsor />
+        <Footer />
     </Box>
   )
 }

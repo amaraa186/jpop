@@ -28,7 +28,7 @@ const Counter = () => {
   return (
     <h1
       style={{
-        fontSize: isTabletOrMobile ? "28px" : "144px",
+        fontSize: isTabletOrMobile ? "28px" : "140px",
         fontFamily: "monospace",
         color: "transparent",
         WebkitTextStrokeWidth: isTabletOrMobile ? 1 : 2,

@@ -5,7 +5,13 @@ const Contact = () => {
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
 
   return (
-    <Box smColumn={12} mdColumn={12} lgColumn={6} position="relative">
+    <Box
+      smColumn={12}
+      mdColumn={12}
+      lgColumn={6}
+      column={12}
+      position="relative"
+    >
       <div
         style={{
           backgroundColor: "#f271ac",

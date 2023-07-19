@@ -130,18 +130,18 @@ const Sponsor = () => {
   return (
     <Box padding={12}>
       <Title text="ДЭМЖИГЧ БАЙГУУЛЛАГУУД" />
-      <Box paddingY={12} display="flex" direction="column">
+      <Box display="flex" direction="column">
         {sponsors.map((sponsor, index) => (
-          <Box key={index} paddingY={6} column={12}>
+          <Box key={index} marginTop={4}>
             <Flex gap={2} alignItems="center" justifyContent="around">
               {sponsor.logos.map((logo, i) => (
-                <Box key={i} column={6} lgColumn={12} mdColumn={6} smColumn={6}>
+                <Box key={i}>
                   <img src={logo.src} style={{ width: "100%" }} />
                 </Box>
               ))}
             </Flex>
             {index < sponsors.length - 1 && (
-              <Box padding={6}>
+              <Box marginTop={4}>
                 <div
                   style={{
                     height: isTabletOrMobile ? 5 : 10,
