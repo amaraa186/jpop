@@ -6,6 +6,8 @@ import Footer from "../app/modules/landing/Footer"
 import Sponsor from "../app/modules/landing/Sponsor"
 import Cover from "../app/modules/landing/Cover"
 import Registration from "../app/modules/landing/Registration"
+import CountDown from "../app/modules/landing/CountDown"
+import Schedule from "../app/modules/landing/Schedule"
 
 
 const Home = () => {
@@ -13,9 +15,11 @@ const Home = () => {
     <Box color="light">
       <Header />
       <Cover />
-        <Registration />
-        <Sponsor />
-        <Footer />
+      <Registration />
+      <CountDown />
+      <Schedule />
+      <Sponsor />
+      <Footer />
     </Box>
   )
 }

@@ -28,12 +28,10 @@ const Registration = () => {
       <Box height={20} />
       <Flex gap={4} justifyContent="center" wrap>
         {contests.map((contest, i) => (
-          <Box display="flex" direction="column">
-            <Box width={300} key={i}>
-              <TapArea onTap={() => {}}>
-                <img src={contest.src} style={{ width: "100%" }} />
-              </TapArea>
-            </Box>
+          <Box display="flex" direction="column" key={i}>
+            <TapArea onTap={() => {}}>
+              <img src={contest.src} style={{ width: "32em" }} />
+            </TapArea>
             <Box height={10} />
             <Button link={contest.link} text="Тэмцээнд бүртгүүлэх" />
           </Box>
