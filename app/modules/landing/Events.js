@@ -112,7 +112,7 @@ const Events = () => {
         wrap
       >
         {events.map((event, i) => (
-          <Flex direction="column" alignItems="center" gap={2}>
+          <Flex direction="column" alignItems="center" gap={2} key={i}>
             <Mask width={700}>
               <Image src={event.cover} naturalHeight={1} naturalWidth={2} />
             </Mask>
