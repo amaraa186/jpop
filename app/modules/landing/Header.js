@@ -14,7 +14,13 @@ const BOX_ZINDEX = new FixedZIndex(1);
 const STICKY_ZINDEX = new CompositeZIndex([BOX_ZINDEX]);
 
 const Header = () => {
-  const taps = ["Эхлэл", "Бүртгэл", "Хөтөлбөр", "Өдөрлөг", "Холбогдох"];
+  const taps = [
+    { title: "Эхлэл", url: "/" },
+    { title: "Бүртгэл", url: "/" },
+    { title: "Хөтөлбөр", url: "/" },
+    { title: "Өдөрлөг", url: "/" },
+    { title: "Холбогдох", url: "/" },
+  ];
   const icons = [
     {
       name: "ig",
@@ -52,13 +58,13 @@ const Header = () => {
           </Box>
           <Flex gap={8}>
             {taps.map((tap, i) => (
-              <TapArea key={i}>
+              <Link key={i} underline="none" href={tap.url}>
                 <Box padding={1}>
                   <Text weight="bold" color="light" size="400">
-                    {tap}
+                    {tap.title}
                   </Text>
                 </Box>
-              </TapArea>
+              </Link>
             ))}
           </Flex>
           <Box marginEnd={5}>
