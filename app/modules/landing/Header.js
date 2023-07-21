@@ -16,10 +16,10 @@ const STICKY_ZINDEX = new CompositeZIndex([BOX_ZINDEX]);
 const Header = () => {
   const taps = [
     { title: "Эхлэл", url: "/" },
-    { title: "Бүртгэл", url: "/" },
-    { title: "Хөтөлбөр", url: "/" },
-    { title: "Өдөрлөг", url: "/" },
-    { title: "Холбогдох", url: "/" },
+    { title: "Бүртгэл", url: "/#registration" },
+    { title: "Хөтөлбөр", url: "/#schedule" },
+    { title: "Өдөрлөг", url: "/#events" },
+    { title: "Холбогдох", url: "/#contract" },
   ];
   const icons = [
     {

@@ -101,7 +101,7 @@ const events = [
 
 const Events = () => {
   return (
-    <Box paddingX={12} paddingY={10}>
+    <Box paddingX={12} paddingY={10} id="events">
       <Title text="АРГА ХЭМЖЭЭНҮҮД" />
       <Box height={20} />
       <Flex

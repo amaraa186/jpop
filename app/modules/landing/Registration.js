@@ -23,7 +23,7 @@ const contests = [
 
 const Registration = () => {
   return (
-    <Box paddingX={12} paddingY={10}>
+    <Box paddingX={12} paddingY={10} id="registration">
       <Title text="ТЭМЦЭЭНИЙ БҮРТГЭЛ" />
       <Box height={20} />
       <Flex gap={4} justifyContent="center" wrap>

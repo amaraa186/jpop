@@ -3,7 +3,7 @@ import Title from "@/app/components/Title";
 
 const Schedule = () => {
   return (
-    <Box paddingX={12} paddingY={10}>
+    <Box paddingX={12} paddingY={10} id="schedule">
       <Title text="АРГА ХЭМЖЭЭНИЙ ХӨТӨЛБӨР" />
       <Box height={20} />
       <Table accessibilityLabel="Sticky Column" borderStyle="sm">
